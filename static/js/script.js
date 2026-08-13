@@ -66,3 +66,186 @@ burger.addEventListener("click",()=>{
     mobileMenu.classList.toggle("active");
 
 });
+/*================ REVIEWS SLIDER =================*/
+
+const reviewsTrack = document.querySelector(".reviews-track");
+
+const reviewCards = document.querySelectorAll(".review-card");
+
+const reviewsPrev = document.querySelector(".reviews-prev");
+
+const reviewsNext = document.querySelector(".reviews-next");
+
+const reviewDots = document.querySelectorAll(".review-dot");
+
+let reviewIndex = 0;
+
+
+/* Количество карточек на экране */
+
+function getReviewsPerPage() {
+
+    if (window.innerWidth <= 700) {
+
+        return 1;
+
+    }
+
+    if (window.innerWidth <= 1000) {
+
+        return 2;
+
+    }
+
+    return 3;
+
+}
+
+
+/* Максимальный индекс */
+
+function getMaxReviewIndex() {
+
+    return Math.max(
+        0,
+        reviewCards.length - getReviewsPerPage()
+    );
+
+}
+
+
+/* Обновление слайдера */
+
+function updateReviews() {
+
+    const cardsPerPage = getReviewsPerPage();
+
+    const cardWidth =
+        reviewCards[0].getBoundingClientRect().width;
+
+    const gap =
+        parseFloat(
+            getComputedStyle(reviewCards[0]).marginRight
+        );
+
+    const offset =
+        reviewIndex * (cardWidth + gap);
+
+    reviewsTrack.style.transform =
+        `translateX(-${offset}px)`;
+
+
+    /* Обновляем точки */
+
+    reviewDots.forEach((dot, index) => {
+
+        dot.classList.toggle(
+            "active",
+            index === reviewIndex
+        );
+
+    });
+
+}
+
+
+/* Следующий */
+
+reviewsNext.addEventListener("click", () => {
+
+    const maxIndex = getMaxReviewIndex();
+
+    if (reviewIndex < maxIndex) {
+
+        reviewIndex++;
+
+    } else {
+
+        reviewIndex = 0;
+
+    }
+
+    updateReviews();
+
+});
+
+
+/* Предыдущий */
+
+reviewsPrev.addEventListener("click", () => {
+
+    const maxIndex = getMaxReviewIndex();
+
+    if (reviewIndex > 0) {
+
+        reviewIndex--;
+
+    } else {
+
+        reviewIndex = maxIndex;
+
+    }
+
+    updateReviews();
+
+});
+
+
+/* Точки */
+
+reviewDots.forEach((dot, index) => {
+
+    dot.addEventListener("click", () => {
+
+        reviewIndex =
+            Math.min(
+                index,
+                getMaxReviewIndex()
+            );
+
+        updateReviews();
+
+    });
+
+});
+
+
+/* Пересчитываем при изменении размера */
+
+window.addEventListener("resize", () => {
+
+    reviewIndex =
+        Math.min(
+            reviewIndex,
+            getMaxReviewIndex()
+        );
+
+    updateReviews();
+
+});
+
+
+/* Автоматическое переключение */
+
+let reviewsAutoPlay = setInterval(() => {
+
+    const maxIndex = getMaxReviewIndex();
+
+    if (reviewIndex < maxIndex) {
+
+        reviewIndex++;
+
+    } else {
+
+        reviewIndex = 0;
+
+    }
+
+    updateReviews();
+
+}, 6000);
+
+
+/* Первоначальная инициализация */
+
+updateReviews();

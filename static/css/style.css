@@ -1361,3 +1361,396 @@ display:block;
 }
 
 }
+
+/*================ REVIEWS =================*/
+
+.reviews {
+
+    padding: 140px 0;
+
+    background: #101010;
+
+    overflow: hidden;
+
+}
+
+
+/* Заголовок */
+
+.reviews-header {
+
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 0 auto 70px;
+
+}
+
+.reviews-tag {
+
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    margin-bottom: 20px;
+
+    border-radius: 40px;
+
+    background: #1c1c1c;
+
+    color: #ff2b2b;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+.reviews-header h2 {
+
+    margin-bottom: 22px;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+}
+
+.reviews-header p {
+
+    color: #999;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* Слайдер */
+
+.reviews-slider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    position: relative;
+
+}
+
+
+.reviews-window {
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+
+.reviews-track {
+
+    display: flex;
+
+    transition: transform .55s cubic-bezier(.4, 0, .2, 1);
+
+}
+
+
+.review-card {
+
+    flex: 0 0 calc(33.333333% - 17px);
+
+    margin-right: 25px;
+
+    min-height: 330px;
+
+    padding: 35px;
+
+    background: #181818;
+
+    border: 1px solid rgba(255,255,255,.06);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: .35s;
+
+}
+
+
+.review-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: rgba(255,43,43,.35);
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.35);
+
+}
+
+
+/* Верхняя часть */
+
+.review-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.review-stars {
+
+    color: #ffb000;
+
+    font-size: 21px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+}
+
+
+.review-date {
+
+    color: #777;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+}
+
+
+/* Текст */
+
+.review-text {
+
+    color: #ddd;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 0;
+
+    flex: 1;
+
+}
+
+
+/* Нижняя часть */
+
+.review-footer {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.07);
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* Стрелки */
+
+.reviews-arrow {
+
+    flex: 0 0 55px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: 1px solid rgba(255,255,255,.1);
+
+    border-radius: 50%;
+
+    background: #181818;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.reviews-arrow svg {
+
+    width: 24px;
+
+    height: 24px;
+
+}
+
+
+.reviews-arrow:hover {
+
+    background: #ff2b2b;
+
+    border-color: #ff2b2b;
+
+    transform: scale(1.08);
+
+}
+
+
+/* Точки */
+
+.reviews-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 40px;
+
+}
+
+
+.review-dot {
+
+    width: 9px;
+
+    height: 9px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #444;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.review-dot.active {
+
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: #ff2b2b;
+
+}
+
+
+/* Планшет */
+
+@media (max-width: 1000px) {
+
+    .review-card {
+
+        flex: 0 0 calc(50% - 12.5px);
+
+    }
+
+}
+
+
+/* Телефон */
+
+@media (max-width: 700px) {
+
+    .reviews {
+
+        padding: 100px 0;
+
+    }
+
+    .reviews-header h2 {
+
+        font-size: 36px;
+
+    }
+
+    .reviews-header p {
+
+        font-size: 16px;
+
+    }
+
+    .reviews-slider {
+
+        gap: 10px;
+
+    }
+
+    .reviews-arrow {
+
+        flex: 0 0 44px;
+
+        width: 44px;
+
+        height: 44px;
+
+    }
+
+    .review-card {
+
+        flex: 0 0 100%;
+
+        margin-right: 0;
+
+        min-height: 360px;
+
+        padding: 27px;
+
+    }
+
+    .review-top {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+    .review-text {
+
+        font-size: 16px;
+
+    }
+
+}
