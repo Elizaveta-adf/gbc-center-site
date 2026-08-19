@@ -1262,30 +1262,71 @@ color:#999;
 
 }
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-.contacts-grid{
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
 
-grid-template-columns:1fr;
+    .map {
+        height: 400px;
+    }
 
-}
-
-.map{
-
-height:400px;
-
-}
-
-.footer-content{
-
-flex-direction:column;
-
-text-align:center;
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
 }
 
+
+/* Компактный текст контактов на телефоне */
+
+@media (max-width: 700px) {
+
+    .contacts {
+        padding: 70px 0;
+    }
+
+    .contacts h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .contacts p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .contacts-grid {
+        gap: 15px;
+    }
+
+    .map {
+        height: 300px;
+    }
+
 }
 
+
+/* Очень маленькие телефоны */
+
+@media (max-width: 400px) {
+
+    .contacts h2 {
+        font-size: 27px;
+    }
+
+    .contacts p {
+        font-size: 12px;
+    }
+
+    .map {
+        height: 280px;
+    }
+
+}
 /*================ MOBILE MENU =================*/
 
 .burger{
@@ -1777,15 +1818,6 @@ display:block;
 
 }
 
-
-@media (max-width: 500px) {
-
-    .price-row {
-        flex-direction: column;
-        gap: 7px;
-    }
-
-}
 /* ================= FOOTER COMPANY ================= */
 
 .footer-company h3 {
@@ -1861,21 +1893,3 @@ display:block;
         font-size: 13px;
         line-height: 1.5;
     }
-
-
-    /* Запишитесь на ремонт двигателя */
-
-    .contacts-header h2,
-    .cta h2,
-    .appointment h2 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-    .contacts-header p,
-    .cta p,
-    .appointment p {
-        font-size: 13px;
-        line-height: 1.5;
-    }
-}
