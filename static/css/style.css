@@ -647,25 +647,25 @@ grid-template-columns:repeat(2,1fr);
 
     .stat-card{
 
-        padding:22px 12px;
+        padding:18px 10px;
 
-        border-radius:14px;
+        border-radius:12px;
 
     }
 
     .number{
 
-        font-size:34px;
+        font-size:30px;
 
-        margin-bottom:8px;
+        margin-bottom:6px;
 
     }
 
     .text{
 
-        font-size:13px;
+        font-size:12px;
 
-        line-height:1.4;
+        line-height:1.35;
 
     }
 
@@ -680,35 +680,35 @@ grid-template-columns:repeat(2,1fr);
 
     .feature{
 
-        padding:20px 14px;
+        padding:16px 12px;
 
-        border-radius:14px;
+        border-radius:12px;
 
     }
 
     .icon{
 
-        font-size:32px;
-
-        margin-bottom:14px;
-
-    }
-
-    .feature h3{
-
-        font-size:17px;
-
-        line-height:1.3;
+        font-size:28px;
 
         margin-bottom:10px;
 
     }
 
+    .feature h3{
+
+        font-size:14px;
+
+        line-height:1.25;
+
+        margin-bottom:7px;
+
+    }
+
     .feature p{
 
-        font-size:13px;
+        font-size:11px;
 
-        line-height:1.5;
+        line-height:1.4;
 
     }
 
@@ -823,78 +823,41 @@ font-size:17px;
 
 }
 
-@media(max-width:1100px){
+@media (max-width: 700px) {
 
-.services-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:700px){
-
-    .services{
-
-        padding:80px 0;
-
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 40px;
     }
 
-    .services-grid{
-
-        grid-template-columns:repeat(2,minmax(0,1fr));
-
-        gap:10px;
-
-        margin-top:40px;
-
+    .service-card {
+        border-radius: 12px;
     }
 
-    .service-card{
-
-        border-radius:14px;
-
+    .service-card img {
+        height: 120px;
     }
 
-    .service-card img{
-
-        height:150px;
-
+    .service-content {
+        padding: 14px;
     }
 
-    .service-content{
-
-        padding:18px;
-
+    .service-icon {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 8px;
     }
 
-    .service-icon{
-
-        width:34px;
-
-        height:34px;
-
-        margin-bottom:12px;
-
+    .service-content h3 {
+        font-size: 14px;
+        line-height: 1.25;
+        margin-bottom: 7px;
     }
 
-    .service-content h3{
-
-        font-size:17px;
-
-        line-height:1.3;
-
-        margin-bottom:10px;
-
-    }
-
-    .service-content p{
-
-        font-size:12px;
-
-        line-height:1.5;
-
+    .service-content p {
+        font-size: 11px;
+        line-height: 1.4;
     }
 
 }
