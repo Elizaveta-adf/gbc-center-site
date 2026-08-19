@@ -66,6 +66,21 @@ burger.addEventListener("click",()=>{
     mobileMenu.classList.toggle("active");
 
 });
+// Закрытие мобильного меню после выбора пункта
+
+const mobileMenuLinks = document.querySelectorAll(".mobile-menu a");
+
+mobileMenuLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
+        burger.classList.remove("active");
+
+    });
+
+});
 /*================ REVIEWS SLIDER =================*/
 
 const reviewsTrack = document.querySelector(".reviews-track");
@@ -244,7 +259,6 @@ let reviewsAutoPlay = setInterval(() => {
     updateReviews();
 
 }, 6000);
-
 
 /* Первоначальная инициализация */
 
