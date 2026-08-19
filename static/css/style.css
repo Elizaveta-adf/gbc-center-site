@@ -1101,37 +1101,6 @@ color:white;
 
 }
 
-@media(max-width:900px){
-
-.gallery-grid{
-
-grid-template-columns:1fr 1fr;
-
-}
-
-.wide{
-
-grid-column:auto;
-
-}
-
-}
-
-@media(max-width:700px){
-
-.gallery-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.tall{
-
-grid-row:auto;
-
-}
-
-}
 
 /*================ CONTACTS =================*/
 
@@ -1754,19 +1723,19 @@ display:block;
 
     .reviews-header h2 {
 
-        font-size: 36px;
+        font-size: 32px;
 
     }
 
     .reviews-header p {
 
-        font-size: 16px;
+        font-size: 14px;
 
     }
 
     .reviews-slider {
 
-        gap: 10px;
+        gap: 8px;
 
     }
 
@@ -1802,7 +1771,7 @@ display:block;
 
     .review-text {
 
-        font-size: 16px;
+        font-size: 14px;
 
     }
 
@@ -1820,7 +1789,7 @@ display:block;
 /* ================= FOOTER COMPANY ================= */
 
 .footer-company h3 {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 }
 
 .footer-company p {
