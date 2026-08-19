@@ -1824,3 +1824,58 @@ display:block;
     padding-top: 25px;
     border-top: 1px solid rgba(255,255,255,.08);
 }
+
+/* =========================
+   КОМПАКТНЫЙ ТЕКСТ НА МОБИЛЬНЫХ
+   ========================= */
+
+@media (max-width: 700px) {
+
+    /* Профессиональное оснащение */
+
+    .equipment-header h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .equipment-header p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .equipment-header {
+        margin-bottom: 35px;
+    }
+
+
+    /* Что говорят клиенты */
+
+    .reviews-header h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .reviews-header p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* Запишитесь на ремонт двигателя */
+
+    .contacts-header h2,
+    .cta h2,
+    .appointment h2 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .contacts-header p,
+    .cta p,
+    .appointment p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
