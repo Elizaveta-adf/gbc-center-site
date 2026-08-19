@@ -1754,3 +1754,64 @@ display:block;
     }
 
 }
+
+
+@media (max-width: 500px) {
+
+    .price-row {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+}
+.prices-note {
+    margin-top: 30px;
+    padding: 22px 25px;
+    background: #181818;
+    border-left: 3px solid #ff3030;
+    border-radius: 8px;
+    color: #999;
+    line-height: 1.6;
+}
+
+.prices-note strong {
+    color: #fff;
+}
+/* ================= FOOTER COMPANY ================= */
+
+.footer-company h3 {
+    margin-bottom: 15px;
+}
+
+.footer-company p {
+    color: #888;
+    line-height: 1.6;
+}
+
+.footer-details {
+    margin-top: 20px;
+}
+
+.footer-details p {
+    margin: 7px 0;
+}
+
+.footer-details strong {
+    color: #ccc;
+}
+
+.footer-details a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-details a:hover {
+    color: #ff3030;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
